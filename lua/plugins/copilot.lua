@@ -13,14 +13,16 @@ return {
         suggestion = {
           enabled = true,
           auto_trigger = true,
-          accept = false,     -- disable built-in keymapping
+          accept = false, -- disable built-in keymapping
+          -- The Meta key only works in macos terminal.app if you set
+          -- "Use Option as Meta key" in your profile settings.
           keymap = {
-            accept = "<C-T>", -- 
-            accept_word = "<A-w>",
-            accept_line = "<A-l>",
-            next = "<A-]>",
-            prev = "<A-[>",
-            dismiss = "<C-]>",
+            accept = "<M-p>",
+            accept_word = "<M-n>",
+            accept_line = "<M-l>",
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<C-]>", -- dismiss current suggestion
           },
         },
       })
