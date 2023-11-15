@@ -75,3 +75,15 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+--- :make keymaps
+vim.keymap.set('n', '<leader>mm', vim.cmd.make, { desc = 'Run [m]ake' })
+vim.keymap.set('n', '<leader>mM', '<cmd>make % -o %<.exe<CR>', { desc = 'Run [M]ake on current file' })
+vim.keymap.set('n', '<leader>mR', '<cmd>!%<.exe<CR>', { desc = '[R]un current file' })
+vim.keymap.set('n', '<leader>mE', '<cmd>make % -o %<.exe && %<.exe<CR>', { desc = 'Run [M]ake on current file and [E]xecute' })
+vim.keymap.set('n', '<leader>mc', '<cmd>make clean<CR>', { desc = '[m]ake [c]lean' })
+vim.keymap.set('n', '<leader>mr', '<cmd>make run<CR>', { desc = 'Run [m]ake [r]un' })
+vim.keymap.set('n', '<leader>mb', '<cmd>make build<CR>', { desc = 'Run [m]ake [b]uild' })
+vim.keymap.set('n', '<leader>mt', '<cmd>make test<CR>', { desc = 'Run [m]ake [t]est' })
+vim.keymap.set('n', '<leader>md', '<cmd>make debug<CR>', { desc = 'Run [m]ake [d]ebug' })
+
