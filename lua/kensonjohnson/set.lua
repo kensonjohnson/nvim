@@ -28,3 +28,9 @@ vim.opt.smartindent = true
 
 --- Turn on syntax for any theme
 vim.opt.syntax = 'on'
+
+--- Set clang as default compiler
+vim.opt.makeprg = 'clang++'
+
+--- Use persistent undo
+vim.opt.undofile = true
